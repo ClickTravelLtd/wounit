@@ -13,9 +13,18 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package com.wounit.stubs;
 
-package com.wounit.model;
+import org.mockito.Spy;
 
-@SuppressWarnings("serial")
-public class FooEntityWithRequiredField extends _FooEntityWithRequiredField {
+import com.webobjects.foundation.NSArray;
+import com.wounit.annotations.Dummy;
+
+/**
+ * @author <a href="mailto:hprange@gmail.com.br">Henrique Prange</a>
+ */
+public class WrongGenericTypeForSpiedObjectStubTestCase {
+    @Spy
+    @Dummy
+    public NSArray<String> wrongGenericType;
 }
